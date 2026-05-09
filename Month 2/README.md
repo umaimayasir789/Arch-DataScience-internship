@@ -97,12 +97,12 @@ pip install pandas numpy matplotlib scikit-learn
 
 
 
-Movie Rating Prediction System
-📌 Project Overview
+# Movie Rating Prediction System
+📌# Project Overview
 
 This project builds a movie recommendation system that predicts how a user will rate a movie they have not seen yet. It uses Collaborative Filtering (SVD algorithm) on the MovieLens dataset to learn user preferences and generate personalized movie recommendations.
 
-📊 Dataset Used
+📊# Dataset Used
 Dataset: MovieLens 100K
 Source: GroupLens Research
 Contains:
@@ -110,19 +110,19 @@ User IDs
 Movie IDs
 Ratings (1–5 scale)
 Timestamps
-🎯 Objective
+🎯 # Objective
 Predict user ratings for unseen movies
 Build a recommendation system
 Evaluate model performance
 Generate top movie recommendations
-🛠️ Technologies Used
+🛠️ # Technologies Used
 Python 🐍
 Pandas
 NumPy
 Matplotlib
 Scikit-Surprise
 Google Colab
-📂 Project Workflow
+📂 # Project Workflow
 1. Load Dataset (u.data)
 2. Data Preprocessing
 3. Convert into Surprise format
@@ -132,16 +132,16 @@ Google Colab
 7. Make Predictions
 8. Evaluate Model (RMSE, MAE)
 9. Recommend Movies
-⚙️ Algorithm Used
+⚙️# Algorithm Used
 🔹 Collaborative Filtering (SVD)
 Finds hidden patterns in user-movie interactions
 Decomposes rating matrix into latent features
 Predicts missing ratings
-📌 Model Training
+📌# Model Training
 from surprise import SVD
 model = SVD()
 model.fit(trainset)
-📊 Evaluation Metrics
+📊 # Evaluation Metrics
 RMSE (Root Mean Squared Error)
 MAE (Mean Absolute Error)
 
@@ -149,13 +149,13 @@ Example results:
 
 RMSE: 0.93  
 MAE:  0.74
-🎬 Prediction Example
+🎬 # Prediction Example
 model.predict(user_id=1, movie_id=50)
 
 Output:
 
 Predicted Rating: 4.2
-🎥 Recommendation System
+🎥 # Recommendation System
 
 The system suggests top movies a user has not seen:
 
@@ -163,24 +163,24 @@ Top Recommendations for User 1:
 Movie ID: 50 → 4.8 ⭐
 Movie ID: 172 → 4.7 ⭐
 Movie ID: 98 → 4.6 ⭐
-📊 Visualization
+📊 # Visualization
 import matplotlib.pyplot as plt
 
 df['rating'].value_counts().sort_index().plot(kind='bar')
 plt.title("Rating Distribution")
 plt.show()
-💡 Key Features
+💡# Key Features
 Predicts unseen movie ratings
 Personalized recommendations
 Handles large sparse datasets
 Easy-to-use pipeline in Google Colab
-🚀 Future Improvements
+🚀# Future Improvements
 Add movie titles (u.item integration)
 Build Streamlit web app
 Deploy using Flask API
 Use Deep Learning (Neural Collaborative Filtering)
 Solve cold start problem
-📌 How to Run
+📌# How to Run
 Open Google Colab
 Upload dataset ZIP
 Extract files
